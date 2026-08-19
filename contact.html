@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – Express Builders Ltd.</title>
+    <meta name="description" content="Get in touch with Express Builders Ltd. for procurement inquiries, project collaboration, or general queries." />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="header"></header>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact <span class="gold">Us</span></h1>
+            <p>Reach out for procurement inquiries or project collaboration</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- ===== CONTACT DETAILS ===== -->
+                <div class="contact-details">
+                    <h2>Get in <span class="gold">Touch</span></h2>
+                    <p class="contact-intro">
+                        We are actively sourcing materials for our upcoming township project.
+                        Suppliers and partners are welcome to connect with us.
+                    </p>
+
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Address</strong>
+                            <p>Shegaonkar Arched, Malgujaripura,<br />Manapure Road, Sudampuri,<br />Wardha, Maharashtra</p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p><a href="https://wa.me/919572265634" target="_blank">+91 9572665634</a></p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Email</strong>
+                            <p><a href="mailto:info@expressbuilderltd.com">info@expressbuilderltd.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="detail-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <strong>Website</strong>
+                            <p><a href="https://expressbuilderltd.com">expressbuilderltd.com</a></p>
+                        </div>
+                    </div>
+
+                    <!-- ===== MAP ===== -->
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7507.985336586804!2d78.5908532!3d20.7392233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd2944c0578b61f%3A0x7d8c04bfae697548!2sWardha%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Express Builders Ltd. Location Map"
+                        ></iframe>
+                    </div>
+                </div>
+
+                <!-- ===== CONTACT FORM ===== -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a <span class="gold">Message</span></h2>
+                    <form id="contactForm" novalidate>
+                        <!-- Name -->
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" placeholder="Your full name" required />
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" placeholder="your@email.com" required />
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="optional">(optional)</span></label>
+                            <input type="tel" id="phone" placeholder="10-digit mobile number" />
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <!-- Subject -->
+                        <div class="form-group">
+                            <label for="subject">Subject <span class="required">*</span></label>
+                            <select id="subject" required>
+                                <option value="">-- Select a subject --</option>
+                                <option value="Material Inquiry">Material Inquiry (Procurement)</option>
+                                <option value="Project Collaboration">Project Collaboration</option>
+                                <option value="General Query">General Query</option>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" placeholder="Tell us about your inquiry..." required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                            <span class="char-counter" id="charCounter">0 / 20 min</span>
+                        </div>
+
+                        <button type="submit" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+
+                    <!-- ===== SUCCESS OVERLAY ===== -->
+                    <div id="successOverlay">
+                        <div class="success-popup">
+                            <i class="fas fa-check-circle"></i>
+                            <h2>Message Sent!</h2>
+                            <p>Thank you for contacting Express Builders Ltd.<br />Our team will reach out to you shortly.</p>
+                            <button id="closeSuccess"><i class="fas fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer id="footer"></footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
